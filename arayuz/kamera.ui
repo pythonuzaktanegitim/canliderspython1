@@ -6,15 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>414</width>
-    <height>516</height>
+    <width>439</width>
+    <height>567</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="lblKamera">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -33,7 +33,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="btKamera">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -43,7 +43,20 @@
      </rect>
     </property>
     <property name="text">
-     <string>Kamera</string>
+     <string>Kamera Aç</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btKapat">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>470</y>
+      <width>343</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Kamera Kapat</string>
     </property>
    </widget>
   </widget>
@@ -52,7 +65,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>414</width>
+     <width>439</width>
      <height>21</height>
     </rect>
    </property>
