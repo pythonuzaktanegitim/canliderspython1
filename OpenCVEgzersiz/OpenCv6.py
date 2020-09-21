@@ -22,6 +22,8 @@ while True:
 
     cv2.imshow("frame",frame)
     cv2.imshow("smooth",smooth)
+    cv2.imshow("smooth2",blur)
+    cv2.imshow("smooth1",median)
     if cv2.waitKey(1) & 0xFF == ord("e"):
         break
 
