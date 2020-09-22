@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication,QMainWindow
+from PyQt5.QtWidgets import QApplication,QWidget
 from PyQt5.QtCore import QTimer
 from PyQt5 import uic
 import cv2
@@ -9,7 +9,7 @@ from PIL import Image
 import os
 
 
-class App(QMainWindow):
+class KameraEgit(QWidget):
     def __init__(self):
         super().__init__()
         self.timer = QTimer()
@@ -17,10 +17,10 @@ class App(QMainWindow):
         self.initUI()
 
     def initUI(self):
-        self.win = uic.loadUi(r"arayuz\kamera.ui")
+        self.win = uic.loadUi(r"arayuz\UI\kameraTanit.ui")
         self.win.btKamera.clicked.connect(self.kameraAc)
         self.win.btKapat.clicked.connect(self.Kapat)
-        self.win.show()
+        
 
 
     def kameraAc(self):
@@ -57,5 +57,6 @@ class App(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    uyg = App()
+    uyg = KameraEgit()
+    uyg.show()
     sys.exit(app.exec_())
