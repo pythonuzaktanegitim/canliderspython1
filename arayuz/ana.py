@@ -27,7 +27,8 @@ class App(QMainWindow):
         try:
             os.mkdir(rf"dataset\{self.txtadi.text()}_{self.txtsoyadi.text()}")
             QMessageBox.information(self,"Bilgi","Klasör Oluşturuldu",QMessageBox.Ok)
-            self._temizle()
+            egitKamera = KameraEgit(f"{self.txtadi.text()}_{self.txtsoyadi.text()}")
+            egitKamera.win.show()
         except FileExistsError:
             QMessageBox.warning(self,"Kayıt Hatası","Bu kayıt zaten var",QMessageBox.Ok)
 
@@ -37,7 +38,7 @@ class App(QMainWindow):
 
     def Kegit(self):
         egitKamera = KameraEgit()
-        egitKamera.show()
+        egitKamera.win.show()
 
 
 if __name__ == "__main__":
