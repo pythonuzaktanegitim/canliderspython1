@@ -62,12 +62,13 @@ class Kamera(QWidget):
                     roi_gray = gri[y:y+h, x:x+w]
                     roi_color = frame[y:y+h, x:x+w]
                     say += 1
-                    path = os.getcwd()+os.sep+"dataset"+os.sep+self.adiSoyadi
-                    cv2.imwrite(path+os.sep+str(say)+".jpg", gri[y:y+h, x:x+w])
-                    eyes = eye_cascade.detectMultiScale(roi_gray)
-                    for (ex, ey, ew, eh) in eyes:
-                            cv2.rectangle(roi_color, (ex, ey),
-                                          (ex+ew, ey+eh), (255, 0, 0), 2)
+                    if cv2.waitKey(100) & 0xFF == ord("e"):
+                        path = os.getcwd()+os.sep+"dataset"+os.sep+self.adiSoyadi
+                        cv2.imwrite(path+os.sep+str(say)+".jpg", gri[y:y+h, x:x+w])
+                    # eyes = eye_cascade.detectMultiScale(roi_gray)
+                    # for (ex, ey, ew, eh) in eyes:
+                    #         cv2.rectangle(roi_color, (ex, ey),
+                    #                       (ex+ew, ey+eh), (255, 0, 0), 2)
             ###################################################################
 
             ############Yansıtma###################################
